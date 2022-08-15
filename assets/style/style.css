@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(90deg, rgb(203, 233, 238) 30%, rgb(108, 207, 240) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.container {
+    width: 420px;
+    height: 250px;
+    background-color: rgb(120, 192, 216);
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: height 0.5s ease;
+}
+
+.container.active { /* classe ACTIVE adicionada via javascript */
+    
+    height: 500px;
+}
+
+.container header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container header p {
+    color: #432103;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.container main :where(input, button) {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.container main input {
+    padding: 0 15px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.container main input:focus {
+    border: 1px solid #a1a1a1;
+}
+
+.container main button {
+    background-color: #00a300;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.container main button:hover {
+    background-color: #008100;
+}
+
+.container footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 40px 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container.active footer {
+    opacity: 1;
+    pointer-events: auto;
+    transition: footer 0.5s ease;
+}
