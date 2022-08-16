@@ -1,8 +1,8 @@
 
 const container = document.querySelector(".container")
-const input = document.querySelector("main input")
-const button = document.querySelector("main button")
-const footerImage = document.querySelector("footer img")
+const input = container.querySelector("main input")
+const button = container.querySelector("main button")
+const footerImage = container.querySelector("footer img")
 
 button.addEventListener("click", () => {
     
